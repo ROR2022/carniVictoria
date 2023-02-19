@@ -21,10 +21,10 @@ const CVnavBar = () => {
               Watsapp
               </Nav.Link>
             <Nav.Link href="tel:+525522471005">
-            <img style={{width:'20px'}} className='me-2' src={imageFaceBN} alt="imageFace" />
+            <img style={{width:'20px'}} className='me-2' src={imageTelBN} alt="imageFace" />
               Llamar</Nav.Link>
             <Nav.Link href="https://www.facebook.com/profile.php?id=100085872317896">
-            <img style={{width:'20px'}} className='me-2' src={imageTelBN} alt="imagePhone" />
+            <img style={{width:'20px'}} className='me-2' src={imageFaceBN} alt="imagePhone" />
               Facebook</Nav.Link>
           </Nav>
         </Navbar.Collapse>
