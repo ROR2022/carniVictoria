@@ -1,5 +1,5 @@
 import React from 'react'
-import { imageFaceBN, imageFaceCL, imageHomeBN, imageHorario, imageTelBN, imageTelCL, imageWatsBN, imageWatsCL } from '../../assets/imgLinks'
+import { imageFaceBN, imageFaceCL, imageHomeBN, imageHorario, imageTelBN, imageTelCL, imageUbiCL, imageWatsBN, imageWatsCL } from '../../assets/imgLinks'
 
 
 const CVfooter = () => {
@@ -18,6 +18,10 @@ const CVfooter = () => {
 
         <a href="tel:+525522471005">
         <img style={{width:'10vw'}} src={imageTelCL} alt="imagePhone" />
+        </a>
+
+        <a href="https://maps.app.goo.gl/Rc7769yrWnVaFseZ7">
+        <img style={{width:'10vw'}} src={imageUbiCL} alt="imageUbication" />
         </a>
 
       </div>
