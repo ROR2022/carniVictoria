@@ -19,4 +19,6 @@ export const imageHomeBN =  `${baseUrl}homeBN.png`;
 export const imageHomeCL =  `${baseUrl}homeCL.png`;
 export const imageUbiBN = `${baseUrl}ubicacionBN.png`;
 export const imageUbiCL = `${baseUrl}ubicacionCL.png`;
+export const imageLogoFace = `${baseUrl}facebookLogo1.png`;
+export const imageLogoGoogle = `${baseUrl}googleLogo1.png`;
 

@@ -1,17 +1,18 @@
-
-import CardsSlider from '../components/CardsSlider/CardsSlider'
 import CVfooter from '../components/CVfooter/CVfooter'
 import CVnavBar from '../components/CVnavBar/CVnavBar'
 import { dividerColor } from "../assets/colors";
+import FormatResena from '../components/FormatResena/FormatResena';
+import Login from '../components/Login/Login';
 
-const Home = () => {
+const Resena = () => {
   return (
     <div style={{backgroundColor:dividerColor}}>
       <header>
         <CVnavBar/>
       </header>
       <main>
-        <CardsSlider/>
+        <Login/>
+        <FormatResena/>
       </main>
       <footer>
         <CVfooter/>
@@ -20,4 +21,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Resena
