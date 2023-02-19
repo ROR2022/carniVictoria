@@ -16,14 +16,14 @@ const CVnavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#">
+            <Nav.Link href="https://api.whatsapp.com/send?phone=5215522471005&text=%C2%A1Hola%20me%20gustaria%20hacer%20un%20pedido!">
             <img style={{width:'20px'}} className='me-2' src={imageWatsBN} alt="imageWats" />
               Watsapp
               </Nav.Link>
-            <Nav.Link href="#">
+            <Nav.Link href="tel:+525522471005">
             <img style={{width:'20px'}} className='me-2' src={imageFaceBN} alt="imageFace" />
               Llamar</Nav.Link>
-            <Nav.Link href="#">
+            <Nav.Link href="https://www.facebook.com/profile.php?id=100085872317896">
             <img style={{width:'20px'}} className='me-2' src={imageTelBN} alt="imagePhone" />
               Facebook</Nav.Link>
           </Nav>
