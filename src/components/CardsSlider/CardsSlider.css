@@ -20,3 +20,31 @@
   height: 100%;
   object-fit: cover;
 }
+
+.anime0 {
+  animation: myAnim0 1s ease 0s 1 normal forwards;
+}
+
+.anime1 {
+  animation: myAnim1 1s ease 0s 1 normal forwards;
+}
+
+.anime2 {
+  animation: myAnim2 1s ease 0s 1 normal forwards;
+}
+
+.anime3 {
+  animation: myAnim3 2s ease 0s 1 normal forwards;
+}
+
+.anime4 {
+  animation: myAnim4 2s ease 0s 1 normal forwards;
+}
+
+.anime5 {
+  animation: myAnim5 2s ease 0s 1 normal forwards;
+}
+
+.anime6 {
+  animation: myAnim6 2s ease 0s 1 normal forwards;
+}

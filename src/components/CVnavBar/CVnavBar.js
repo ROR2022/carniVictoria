@@ -3,30 +3,29 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { darkPrimaryColor } from '../../assets/colors';
+import { imageLogo } from '../../assets/imgLinks';
+import { imageFaceBN, imageHomeBN, imageHorario, imageTelBN, imageWatsBN } from '../../assets/imgLinks'
 
 const CVnavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          <img style={{width: '50px'}} className='border rounded me-3' src="https://carnivictoria.s3.us-west-1.amazonaws.com/logo1.jpg" alt="logo" />
-          <span style={{color:darkPrimaryColor}} className=''>Carniceria La Victoria</span></Navbar.Brand>
+          <img style={{width: '50px'}} className='border rounded me-3' src={imageLogo} alt="logo" />
+          <span style={{color:darkPrimaryColor}} className='fs-6'>Carniceria La Victoria</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="#">
+            <img style={{width:'20px'}} className='me-2' src={imageWatsBN} alt="imageWats" />
+              Watsapp
+              </Nav.Link>
+            <Nav.Link href="#">
+            <img style={{width:'20px'}} className='me-2' src={imageFaceBN} alt="imageFace" />
+              Llamar</Nav.Link>
+            <Nav.Link href="#">
+            <img style={{width:'20px'}} className='me-2' src={imageTelBN} alt="imagePhone" />
+              Facebook</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
