@@ -20,7 +20,10 @@ const Login = () => {
       //console.log(resToken);
       recuperaDataUser();
     }
-    if(myDataUser.email) console.log('myDataUser:..',myDataUser);
+    if(myDataUser.email&&!isConnected) {
+      console.log('myDataUser:..',myDataUser);
+      setIsConnected(true);
+    }
   
     return 
   }, [resToken,myDataUser])
