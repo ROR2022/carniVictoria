@@ -52,7 +52,7 @@ const Login = () => {
         scope: "email, public_profile",
         return_scopes: true,
       });
-      setIsConnected(response.status);
+      //setIsConnected(response.status);
       
       console.log("response:..", response);
       const myToken= response.authResponse?.accessToken;
