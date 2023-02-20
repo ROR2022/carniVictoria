@@ -23,7 +23,7 @@ const Login = () => {
     if(myDataUser.email) console.log('myDataUser:..',myDataUser);
   
     return 
-  }, [resToken])
+  }, [resToken,myDataUser])
   
   const recuperaDataUser = async ()=>{
     try {
