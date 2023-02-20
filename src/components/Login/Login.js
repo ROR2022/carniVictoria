@@ -5,8 +5,10 @@ import { imageLogoGoogle, imageLogoFace } from "../../assets/imgLinks";
 import { primaryColor, lightPrimaryColor, accentColor } from "../../assets/colors";
 import { useLogin } from "react-facebook";
 import { useState, useEffect } from "react";
+import useUser from '../../hooks/useUser';
 
 const Login = () => {
+  const [dataUser, setDataUser] = useUser();
   const [myDataUser, setMyDataUser] = useState({nameUser:'',email:'',photo:''})
   const [isConnected, setIsConnected] = useState(false);
   const { login, isLoading, status, error } = useLogin();
@@ -16,14 +18,21 @@ const Login = () => {
   });
 
   useEffect(() => {
-    if(resToken.token) {
+    if(resToken.token&&!isConnected) {
       //console.log(resToken);
       recuperaDataUser();
     }
-    if(myDataUser.email&&!isConnected) {
-      console.log('myDataUser:..',myDataUser);
-      setIsConnected(true);
+    if(isConnected&&myDataUser.email){
+      console.log('userLogged:..',myDataUser);
+      setDataUser({
+        ...dataUser,
+        nameUser: myDataUser.nameUser,
+        emailUser: myDataUser.email,
+        urlImageUser: myDataUser.photo,
+        isLogged: true
+      })
     }
+    
   
     return 
   }, [resToken,myDataUser])
@@ -38,6 +47,7 @@ const Login = () => {
           email: dataUser.data.email,
           photo: dataUser.data.picture.data.url
         })
+        setIsConnected(true);
       }
     } catch (error) {
       console.log(error);
@@ -96,6 +106,7 @@ const Login = () => {
           email: userInfo.email,
           photo: userInfo.picture
         })
+        setIsConnected(true);
       }
 
       // flow: 'implicit', // implicit is the defaul
