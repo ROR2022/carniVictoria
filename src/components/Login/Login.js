@@ -7,7 +7,7 @@ import { useLogin } from "react-facebook";
 import { useState, useEffect } from "react";
 
 const Login = () => {
-
+  const [myDataUser, setMyDataUser] = useState({nameUser:'',email:'',photo:''})
   const [isConnected, setIsConnected] = useState(false);
   const { login, isLoading, status, error } = useLogin();
   const [resToken, setResToken] = useState({
@@ -20,6 +20,7 @@ const Login = () => {
       //console.log(resToken);
       recuperaDataUser();
     }
+    if(myDataUser.email) console.log('myDataUser:..',myDataUser);
   
     return 
   }, [resToken])
@@ -28,6 +29,13 @@ const Login = () => {
     try {
       const dataUser = await axios.get(`https://graph.facebook.com/${resToken.userID}?fields=id,name,email,picture&access_token=${resToken.token}`);
       console.log('dataUser:..',dataUser);
+      if (dataUser.data?.email){
+        setMyDataUser({
+          nameUser: dataUser.data.name,
+          email: dataUser.data.email,
+          photo: dataUser.data.picture.data.url
+        })
+      }
     } catch (error) {
       console.log(error);
     }
@@ -79,6 +87,13 @@ const Login = () => {
         .then((res) => res.data);
 
       console.log("UserInfo:..", userInfo);
+      if(userInfo.email){
+        setMyDataUser({
+          nameUser: userInfo.name,
+          email: userInfo.email,
+          photo: userInfo.picture
+        })
+      }
 
       // flow: 'implicit', // implicit is the defaul
     },
