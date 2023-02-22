@@ -2,10 +2,13 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { primaryColor } from "../../assets/colors";
 import useUser from '../../hooks/useUser';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getSaludo, postResena } from "../../api/apiVictoria";
+import {useNavigate} from "react-router-dom"
 
 const FormatResena = () => {
   const [dataUser,setDataUser] = useUser();
+  const navigate = useNavigate();
   const { emailUser, nameUser, telUser, urlImageUser}= dataUser;
   const [myResena, setMyResena] = useState({
   emailUser,
@@ -14,6 +17,12 @@ const FormatResena = () => {
   urlImageUser,
   comment: ''
   })
+  
+  useEffect(() => {
+    console.log('imagen del Usuario:..',urlImageUser);
+  
+    return 
+  }, [])
   
 
   const handleChange = (e)=>{
@@ -24,16 +33,19 @@ const FormatResena = () => {
     })
   }
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = async(e)=>{
     e.preventDefault();
+    const result = await postResena(myResena);
     console.log('Enviando datos:..',myResena);
+    console.log('result:..',result);
+    navigate('/');
   }
 
   return (
     <Form className="w-75 me-auto ms-auto py-3">
       <h2 className="ms-auto me-auto text-secondary text-center">Hola!!!</h2>
       <h6>
-        <img style={{width:'50px'}} className='rounded' src={urlImageUser} alt="" />
+        <img style={{width:'50px'}} className='rounded' src={urlImageUser} alt="imageUser" />
       <span style={{color: primaryColor}} className="">{nameUser}</span>
       </h6>
       
