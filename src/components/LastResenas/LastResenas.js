@@ -17,7 +17,8 @@ const LastResenas = () => {
       const result = await getAllResenasBack();
       console.log('Datos de las Reseñas:..',result.data);
       if (result.data?.length>0){
-          setLastResenas(result.data)
+        const inverso = result.data.slice().reverse();
+          setLastResenas(inverso);
       }
     } catch (error) {
       console.log(error);
