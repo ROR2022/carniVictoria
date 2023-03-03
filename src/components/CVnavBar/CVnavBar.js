@@ -16,7 +16,7 @@ const CVnavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#/">
           <img
             style={{ width: "50px" }}
             className="border rounded me-3"

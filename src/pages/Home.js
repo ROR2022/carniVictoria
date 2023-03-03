@@ -13,7 +13,7 @@ const Home = () => {
         <CVnavBar/> 
       </header>
       <main>
-        <Link to={'/resena'} className='btn btn-outline-primary ms-auto'>Escribir Reseña</Link>
+        <Link to={'/resena'} className='btn btn-outline-primary d-block my-1 ms-auto'>Escribir Reseña</Link>
         <LastResenas/>
         <CardsSlider/>
       </main>
