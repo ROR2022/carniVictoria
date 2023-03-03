@@ -19,6 +19,7 @@ const MyResena = ({dataResena}) => {
       const result = await deleteResena(id);
       console.log(result);
       navigate('/');
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }

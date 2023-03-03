@@ -132,7 +132,7 @@ const Login = () => {
         />
         <span className="text-primary fs-5">Ingresa con Google</span>
       </div>
-      <div
+      {/* <div
         style={{
           cursor: "pointer",
           border: `3px solid ${primaryColor}90`,
@@ -148,7 +148,7 @@ const Login = () => {
           alt="logoGoogle"
         />
         <span className="text-primary fs-5">Ingresa con Facebook</span>
-      </div>
+      </div> */}
     </div>
   );
 };
