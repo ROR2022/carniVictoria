@@ -1,9 +1,10 @@
 import axios from "axios";
 
+const proxy= "https://www.ror2022.ga";
 
 export const getSaludo = async ()=>{
   try {
-    const result = await axios.get('/probando');
+    const result = await axios.get(`${proxy}/probando`);
     console.log(result);
     return result
   } catch (error) {
@@ -13,7 +14,7 @@ export const getSaludo = async ()=>{
 
 export const postResena = async (data)=>{
   try {
-    const result = await axios.post('/postresena',data);
+    const result = await axios.post(`${proxy}/postresena`,data);
     console.log(result);
     return result
   } catch (error) {
@@ -23,7 +24,7 @@ export const postResena = async (data)=>{
 
 export const getAllResenasBack = async ()=>{
   try {
-    const result = await axios.get('/getAllResenas');
+    const result = await axios.get(`${proxy}/getAllResenas`);
     console.log(result);
     return result
   } catch (error) {
@@ -33,7 +34,7 @@ export const getAllResenasBack = async ()=>{
 
 export const deleteResena = async (id)=>{
   try {
-    const result = await axios.delete(`/deleteResena/${id}`);
+    const result = await axios.delete(`${proxy}/deleteResena/${id}`);
     console.log(result);
     return result
   } catch (error) {
