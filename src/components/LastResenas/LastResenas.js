@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getAllResenas } from '../../api/apiVictoria';
+import { getAllResenasBack } from '../../api/apiVictoria';
 import MyResena from './MyResena'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -14,7 +14,7 @@ const LastResenas = () => {
   }, [])
   const recuperaResenas = async ()=>{
     try {
-      const result = await getAllResenas();
+      const result = await getAllResenasBack();
       console.log('Datos de las Reseñas:..',result.data);
       if (result.data?.length>0){
           setLastResenas(result.data)

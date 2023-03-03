@@ -21,7 +21,7 @@ export const postResena = async (data)=>{
   }
 }
 
-export const getAllResenas = async ()=>{
+export const getAllResenasBack = async ()=>{
   try {
     const result = await axios.get('/getAllResenas');
     console.log(result);
