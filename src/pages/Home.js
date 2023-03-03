@@ -4,6 +4,7 @@ import CVfooter from '../components/CVfooter/CVfooter'
 import CVnavBar from '../components/CVnavBar/CVnavBar'
 import { dividerColor } from "../assets/colors";
 import LastResenas from '../components/LastResenas/LastResenas';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <CVnavBar/> 
       </header>
       <main>
+        <Link to={'/resena'} className='btn btn-outline-info'>Escribir Reseña</Link>
         <LastResenas/>
         <CardsSlider/>
       </main>

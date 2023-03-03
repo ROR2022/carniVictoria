@@ -66,6 +66,9 @@ const CVnavBar = () => {
               />
               Ubicacion
             </Nav.Link>
+            <Nav.Link href="#/resena">
+              ✏️ Escribir Reseña
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
